@@ -16,11 +16,11 @@ class CreateEquipasTable extends Migration
         Schema::create('equipas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('victorias');
-            $table->integer('empates');
-            $table->integer('derrotas');
-            $table->integer('golosMarcados');
-            $table->integer('golosSofridos');
+            $table->integer('victorias')->nullable();
+            $table->integer('empates')->nullable();
+            $table->integer('derrotas')->nullable();
+            $table->integer('golosMarcados')->nullable();
+            $table->integer('golosSofridos')->nullable();
             $table->string('descricao');
 
             $table->timestamps();

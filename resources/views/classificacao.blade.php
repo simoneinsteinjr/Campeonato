@@ -106,6 +106,7 @@
             <thead>
 
             <th>EQUIPA</th>
+            <th>J</th>
             <th>V</th>
             <th>E</th>
             <th>D</th>
@@ -121,12 +122,13 @@
 
                 <tr>
                     <td>{{ $equipa->nome }}</td>
+                    <td>{{ ($equipa->victorias)+($equipa->empates)+($equipa->derrotas) }}</td>
                     <td>{{ $equipa->victorias }}</td>
                     <td>{{ $equipa->empates }}</td>
                     <td>{{ $equipa->derrotas }}</td>
                     <td>{{ $equipa->golosMarcados }}</td>
                     <td>{{ $equipa->golosSofridos }}</td>
-                    <td>{{ ($equipa->empates)+ ($equipa->victorias*3) }}</td>
+                    <td><strong>{{ ($equipa->empates)+ ($equipa->victorias*3) }}</strong></td>
                 </tr>
 
             @endforeach

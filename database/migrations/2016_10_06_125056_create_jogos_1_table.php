@@ -16,8 +16,9 @@ class CreateJogos1Table extends Migration
         Schema::create('jogos_1', function (Blueprint $table) {
             $table->increments('id');
             $table->date('dataJogo');
-            $table->string('situacao');
-            $table->string('resultado');
+            $table->time('hora');
+            $table->string('resulatado')->nullable();
+            $table->string('resultado1')->nullable();
 
 
             $table->integer('equipa_id')->unsigned();

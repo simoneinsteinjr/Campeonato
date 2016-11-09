@@ -16,8 +16,8 @@ class CreateEdicaosTable extends Migration
         Schema::create('edicaos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('nrEdicao');
-            $table->date('dataInicio');
-            $table->date('dataFim');
+            $table->date('dataInicio')->nullable();
+            $table->date('dataFim')->nullable();
             $table->string('descricao');
 
             $table->timestamps();

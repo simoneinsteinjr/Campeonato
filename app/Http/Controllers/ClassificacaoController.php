@@ -12,7 +12,7 @@ use App\Equipa;
 class ClassificacaoController extends Controller
 {
     public function index(){
-        $equipas = Equipa::all();
+        $equipas = Equipa::orderBy('victorias', 'desc')->orderBy('empates','desc')->get();
         return view('classificacao', compact('equipas'));
     }
 }

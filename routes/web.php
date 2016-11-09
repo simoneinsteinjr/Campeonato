@@ -34,3 +34,6 @@ Route::resource('edicoes', 'EdicaoController');
 Route::get('edicaoLista', 'EdicaoController@index');
 
 Route::get('jogo', 'JogoController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
